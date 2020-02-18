@@ -1,0 +1,88 @@
+{
+    "xml": false,
+    "flatten": false,
+    "rowsCount": 500,
+    "entities": [
+        {
+            "entity": "AspenInstEvent",
+            "filters": [
+                {
+                    "field": "Date",
+                    "operator": "GreaterOrEqual",
+                    "value": "2019-06-20"
+                },
+                {
+                    "field": "Date",
+                    "operator": "LessOrEqual",
+                    "value": "2019-06-30"
+                },
+                {
+                    "field": "Event Id",
+                    "operator": "NotEqual",
+                    "value": null
+                },
+                {
+                    "field": "Type",
+                    "operator": "NotContains",
+                    "value": "Workshift"
+                },
+                {
+                    "field": "Type",
+                    "operator": "NotContains",
+                    "value": "Reception"
+                },
+                {
+                    "field": "Type",
+                    "operator": "NotContains",
+                    "value": "Sunrise Session"
+                },
+                {
+                    "field": "Type",
+                    "operator": "NotContains",
+                    "value": "Private Event"
+                },
+                {
+                    "field": "Type",
+                    "operator": "NotContains",
+                    "value": "Private Underwriter Event"
+                },
+                {
+                    "field": "Type",
+                    "operator": "NotContains",
+                    "value": "Private Underwriter Dinner"
+                },
+                {
+                    "field": "Type",
+                    "operator": "NotContains",
+                    "value": "Luncheon Roundtable"
+                },
+                {
+                    "field": "Type",
+                    "operator": "NotContains",
+                    "value": "Registration"
+                },
+                {
+                    "field": "Type",
+                    "operator": "NotContains",
+                    "value": "Special Event"
+                },
+                {
+                    "field": "Type",
+                    "operator": "NotContains",
+                    "value": "Book Signings"
+                }
+            ],
+            "orderby": [
+                {
+                    "field": "Event Id",
+                    "descending": "false"
+                }
+            ],
+            "include": [
+                {
+                    "entity": "AspenInstEvent.Participant"
+                }
+            ]
+        }
+    ]
+}
